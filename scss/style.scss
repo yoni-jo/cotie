@@ -58,30 +58,9 @@ header {
     }
     .gnb__right {
       @include flex(space-between);
-    }
-  }
-  .ham {
-    display: none;
-    width: 40px;
-    height: 30px;
-    cursor: pointer;
-    right: 2rem;
-    position: absolute;
-    span {
-      display: block;
-      &::before {
-        top: 20px;
-      }
-      &::after {
-        bottom: 20px;
-      }
-      &::after,
-      &::before {
-        position: absolute;
-        content: "";
-        width: 40px;
-        height: 3px;
-        background-color: $color-black;
+
+      .fas {
+        margin-left: 1rem;
       }
     }
   }
