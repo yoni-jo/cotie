@@ -1,0 +1,6 @@
+// 재사용 코드
+
+@mixin flex($justify: center) {
+  display: flex;
+  justify-content: $justify;
+}
