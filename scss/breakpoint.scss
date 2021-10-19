@@ -1,11 +1,13 @@
 $lt: 1480px;
-$tb: 1024px;
-$sp: 540px;
+$tb: 1280px;
+$sp: 768px;
 
 // PC
 @media (max-width: $lt) {
+  // header
   header {
     .logo {
+      margin: 0 0 -2rem;
       path {
         transform: scale(0.8);
       }
@@ -13,17 +15,35 @@ $sp: 540px;
     .gnb {
       li {
         transform: scale(0.8);
+        margin-right: 1em;
       }
     }
   }
 }
 
-// HEADER
-// FONT SiZE
-
 // TABLET
 @media (max-width: $tb) {
-  // HEADER
+  // header
+  header {
+    .logo {
+      path {
+        transform: scale(0.6);
+      }
+    }
+    nav.gnb {
+      .gnb__left {
+        display: none;
+      }
+      .gnb__right {
+        li:not(li:nth-child(1)) {
+          display: none;
+        }
+      }
+    }
+    div.ham {
+      display: block;
+    }
+  }
 }
 
 // PHONE
