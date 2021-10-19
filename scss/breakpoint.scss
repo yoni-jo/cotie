@@ -4,18 +4,48 @@ $sp: 768px;
 
 // PC
 @media (max-width: $lt) {
+  $font-size_visual-title: 5rem;
+
   // header
   header {
     .logo {
       margin: 0 0 -2rem;
+
       path {
         transform: scale(0.8);
       }
     }
+
     .gnb {
       li {
         transform: scale(0.8);
         margin-right: 1em;
+      }
+    }
+  }
+
+  // VISUAL
+
+  .visual {
+    .wrap {
+      text-align: center;
+
+      .floating--img {
+        transform: scale(0.7);
+      }
+
+      h2.visual__title {
+        font-size: $font-size_visual-title;
+        margin-bottom: -3rem;
+      }
+
+      .item__img {
+        display: block;
+        width: 100%;
+        max-width: 1000px;
+        height: 100%;
+        object-fit: contain;
+        margin: 0 auto;
       }
     }
   }
@@ -30,22 +60,44 @@ $sp: 768px;
         transform: scale(0.6);
       }
     }
+
     nav.gnb {
       .gnb__left {
         display: none;
       }
+
       .gnb__right {
         li:not(li:nth-child(1)) {
           display: none;
         }
       }
     }
+
     div.ham {
       display: block;
     }
   }
-}
 
-// PHONE
-@media (max-width: $sp) {
+  // VISUAL
+
+  .visual {
+    .wrap {
+      .floating--img {
+        transform: scale(0.7);
+      }
+    }
+  }
+
+  // PHONE
+  @media (max-width: $sp) {
+    // VISUAL
+
+    .visual {
+      .wrap {
+        .floating--img {
+          display: none;
+        }
+      }
+    }
+  }
 }

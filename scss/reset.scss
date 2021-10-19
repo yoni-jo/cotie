@@ -1,13 +1,17 @@
 * {
-  font-family: "Andada Pro", "Noto Sans KR", serif;
+  font-family: "Andada Pro", serif;
   box-sizing: border-box;
 }
 html,
 body {
   width: 100%;
-  font-family: "Andada Pro", "Noto Sans KR", serif;
+  font-family: "Andada Pro", serif;
 }
 a {
   text-decoration: none;
   color: #000;
+}
+
+img {
+  display: block;
 }
