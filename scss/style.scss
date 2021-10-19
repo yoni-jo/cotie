@@ -1,4 +1,5 @@
-@import "./reuse_code", "./common";
+@import "./reuse_code";
+@import "./common";
 @import "./breakpoint";
 
 // HEADER
@@ -84,8 +85,6 @@ header {
 
 .visual {
   .wrap {
-    position: relative;
-    text-align: center;
     .floating--img {
       position: absolute;
       max-width: 170px;
@@ -104,6 +103,7 @@ header {
     }
 
     .visual__title {
+      letter-spacing: -1px;
       position: relative;
       text-align: center;
       font-size: $font-size_visual-title;
@@ -119,6 +119,17 @@ header {
       height: 100%;
       object-fit: contain;
       margin: 0 auto;
+    }
+  }
+}
+
+// BRANDS
+.brands:nth-of-type(2) {
+  > .item {
+    flex-direction: row-reverse;
+    .item__img,
+    .item__info {
+      width: calc(100% / 2);
     }
   }
 }
