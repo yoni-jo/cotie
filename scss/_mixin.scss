@@ -1,0 +1,35 @@
+@import "./variables";
+
+@mixin flex($justify: center) {
+  display: flex;
+  justify-content: $justify;
+  @content;
+}
+
+@mixin scale($size: 0.7) {
+  transform: scale($size);
+}
+
+@mixin font($size, $weight: $bold) {
+  font-size: $size;
+  font-weight: $weight;
+}
+
+// 미디어쿼리
+
+@mixin laptop {
+  @media (max-width:#{$lt}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width:#{$tb}) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width:#{$mb}) {
+    @content;
+  }
+}
