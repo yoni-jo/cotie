@@ -1,0 +1,31 @@
+$lt: 1480px;
+$tb: 1024px;
+$sp: 540px;
+
+// PC
+@media (max-width: $lt) {
+  header {
+    .logo {
+      path {
+        transform: scale(0.8);
+      }
+    }
+    .gnb {
+      li {
+        transform: scale(0.8);
+      }
+    }
+  }
+}
+
+// HEADER
+// FONT SiZE
+
+// TABLET
+@media (max-width: $tb) {
+  // HEADER
+}
+
+// PHONE
+@media (max-width: $sp) {
+}
