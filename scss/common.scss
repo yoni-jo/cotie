@@ -1,26 +1,5 @@
 @import "./reuse_code";
-
-// SiZE
-$font-size_menu: 1.8rem;
-$font-size_title: 4rem;
-$font-size_visual-title: 9rem;
-$font-size_intro: 1.3rem;
-$font-size_more--btn: 1.3rem;
-$logo-size: 18rem;
-
-//FONT WEIGHT
-$font-weight-bold: 600;
-$font-weight-regular: 400;
-$font-weight-medium: 500;
-$font-weight-thin: 300;
-//COLOR
-$color-bg: #f0ede6;
-$color-black: #000;
-$color-gray: #948f8f;
-$color-white: #fff;
-// FONT FAMILY
-$font-ko: "Noto Sans KR";
-$font-eng: "Andada Pro", serif;
+@import "./breakpoint";
 html {
   background-color: $color-bg;
   font-size: 16px;
@@ -64,6 +43,7 @@ section {
 
 // BTN 공용
 .btn__more {
+  transition: 0.2s;
   position: relative;
   margin-top: 3rem;
   display: block;
@@ -95,10 +75,12 @@ section {
 
 //info
 p.info {
+  letter-spacing: -2px;
+  transition: 0.2s;
   margin: 3rem 0;
   font-family: $font-ko;
   font-weight: $font-weight-medium;
   text-align: center;
-  white-space: pre;
+  white-space: pre-line;
   font-size: $font-size_intro;
 }
