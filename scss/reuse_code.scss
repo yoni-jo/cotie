@@ -5,3 +5,7 @@
   justify-content: $justify;
   @content;
 }
+
+@mixin scale($size: 0.7) {
+  transform: scale($size);
+}
