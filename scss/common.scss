@@ -1,5 +1,5 @@
-@import "./reuse_code";
-@import "./breakpoint";
+@import "./mixin";
+@import "./variables";
 html {
   background-color: $color-bg;
   font-size: 16px;
@@ -37,8 +37,7 @@ section {
   width: 100%;
 }
 .title {
-  font-size: $font-size_title;
-  font-weight: $font-weight-bold;
+  @include font($pc-size_title);
   text-align: center;
 }
 .wrap {
@@ -102,8 +101,7 @@ div.item__video {
   background-size: cover;
   background-position: center;
   margin: 0 auto;
-  font-size: $font-size_more--btn;
-  font-weight: $font-weight-medium;
+  @include font($pc-size_more--btn, $medium);
   &:hover::before {
     content: "";
     position: absolute;
@@ -126,8 +124,7 @@ p.info {
   transition: 0.2s;
   margin: 3rem 0;
   font-family: $font-ko;
-  font-weight: $font-weight-medium;
   text-align: center;
   white-space: pre-line;
-  font-size: $font-size_intro;
+  @include font($pc-size_intro, $medium);
 }
