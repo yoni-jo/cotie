@@ -18,3 +18,28 @@ html {
   background-color: $color-bg;
   font-size: 16px;
 }
+.ham {
+  display: none;
+  width: 40px;
+  height: 30px;
+  cursor: pointer;
+  right: 2rem;
+  position: absolute;
+  span {
+    display: block;
+    &::before {
+      top: 20px;
+    }
+    &::after {
+      bottom: 20px;
+    }
+    &::after,
+    &::before {
+      position: absolute;
+      content: "";
+      width: 40px;
+      height: 3px;
+      background-color: $color-black;
+    }
+  }
+}
