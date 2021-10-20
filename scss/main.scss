@@ -3,7 +3,8 @@
 
 @include laptop {
   //공통
-  p.info {
+  p.info,
+  h4 {
     @include font($size: $lt-size_intro);
   }
   .btn__more,
@@ -61,7 +62,9 @@
 }
 @include tablet {
   //공통
-  p.info {
+  p.info,
+  h4,
+  p {
     @include font($size: $tb-size_intro);
   }
   .btn__more,
@@ -125,7 +128,8 @@
 }
 @include mobile {
   //공통
-  p.info {
+  p.info,
+  h4 {
     @include font($mb-size_intro, $regular);
   }
   .btn__more,
