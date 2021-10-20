@@ -59,6 +59,12 @@
       }
     }
   }
+  // SIGN SLIDE
+  .sign__slide {
+    .sign__box {
+      @include font($lt-size_visual-title);
+    }
+  }
 }
 @include tablet {
   //공통
@@ -125,6 +131,12 @@
       }
     }
   }
+  // SIGN SLIDE
+  .sign__slide {
+    .sign__box {
+      @include font($tb-size_visual-title);
+    }
+  }
 }
 @include mobile {
   //공통
@@ -144,6 +156,12 @@
           @include scale;
         }
       }
+    }
+  }
+  // SIGN SLIDE
+  .sign__slide {
+    .sign__box {
+      @include font($mb-size_visual-title);
     }
   }
 }

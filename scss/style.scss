@@ -218,3 +218,33 @@ header {
     }
   }
 }
+
+// SIGN SLIDE
+.sign__slide {
+  margin-top: 10rem;
+  width: 100%;
+  overflow: hidden;
+  .sign__box {
+    border: 1px solid $color-black;
+    @include flex(flex-start);
+    align-items: center;
+    @include font($pc-size_visual-title);
+    width: calc(1200px * 12);
+    animation: slide 40s linear infinite;
+    .sign {
+      max-width: 1200px;
+      text-align: left;
+      padding: 1.4rem;
+      margin-right: 2rem;
+    }
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-1200px * 6));
+  }
+}
