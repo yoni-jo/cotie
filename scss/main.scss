@@ -6,7 +6,8 @@
   p.info {
     @include font($size: $lt-size_intro);
   }
-  .btn__more {
+  .btn__more,
+  .title {
     @include scale(0.8);
   }
 
@@ -63,7 +64,8 @@
   p.info {
     @include font($size: $tb-size_intro);
   }
-  .btn__more {
+  .btn__more,
+  .title {
     @include scale(0.7);
   }
   // item
@@ -126,7 +128,8 @@
   p.info {
     @include font($mb-size_intro, $regular);
   }
-  .btn__more {
+  .btn__more,
+  .title {
     @include scale(0.6);
   }
   // item
