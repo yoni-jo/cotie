@@ -9,6 +9,17 @@
   .btn__more {
     @include scale(0.8);
   }
+
+  // item
+  .item {
+    .item__info {
+      .item--title {
+        img {
+          @include scale(0.9);
+        }
+      }
+    }
+  }
   // header
   header {
     .logo {
@@ -28,7 +39,6 @@
   }
 
   // VISUAL
-
   .visual {
     .wrap {
       text-align: center;
@@ -55,6 +65,16 @@
   }
   .btn__more {
     @include scale(0.7);
+  }
+  // item
+  .item {
+    .item__info {
+      .item--title {
+        img {
+          @include scale(0.8);
+        }
+      }
+    }
   }
   // header
   header {
@@ -104,9 +124,19 @@
 @include mobile {
   //공통
   p.info {
-    @include scale(0.7);
+    @include font($mb-size_intro, $regular);
   }
   .btn__more {
-    @include scale(0.7);
+    @include scale(0.6);
+  }
+  // item
+  .item {
+    .item__info {
+      .item--title {
+        img {
+          @include scale;
+        }
+      }
+    }
   }
 }
