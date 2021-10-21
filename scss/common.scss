@@ -114,7 +114,7 @@ div.item__video {
 }
 
 // BTN 공용
-.btn__more {
+.btn--more {
   text-align: center;
   transition: 0.2s;
   position: relative;
@@ -129,7 +129,10 @@ div.item__video {
   background-position: center;
   margin: 0 auto;
   @include font($pc-size_more--btn, $medium);
-
+  i {
+    margin-right: 1rem;
+    vertical-align: middle;
+  }
   &:hover::before {
     content: "";
     position: absolute;

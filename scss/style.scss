@@ -135,8 +135,6 @@ header {
 .new {
   position: relative;
   .wrap {
-    .title {
-    }
     .showing {
       margin-top: 10rem;
       @include flex(flex-start);
@@ -225,12 +223,12 @@ header {
   width: 100%;
   overflow: hidden;
   .sign__box {
-    border: 1px solid $color-black;
     @include flex(flex-start);
     align-items: center;
     @include font($pc-size_visual-title);
     width: calc(1200px * 12);
     animation: slide 40s linear infinite;
+    border: 1px solid $color-black;
     .sign {
       max-width: 1200px;
       text-align: left;
@@ -238,13 +236,48 @@ header {
       margin-right: 2rem;
     }
   }
+
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-1200px * 6));
+    }
+  }
 }
 
-@keyframes slide {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-1200px * 6));
+// COTIELOG
+
+.cotielog {
+  .cotielog__list {
+    @include flex(center);
+    flex-direction: row;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    width: 100%;
+    li {
+      @include flex;
+      height: 100%;
+      max-width: calc(100% / 2 - 4rem);
+      min-width: 400px;
+
+      &:nth-child(1),
+      &:nth-child(3) {
+        margin-right: 4rem;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+      a {
+        img {
+          width: 100%;
+        }
+        p.info {
+          text-align: left;
+          @include font($pc-size_intro * 1.3, $bold);
+        }
+      }
+    }
   }
 }
