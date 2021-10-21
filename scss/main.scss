@@ -65,6 +65,43 @@
       @include font($lt-size_visual-title);
     }
   }
+  // INSTARGRAM
+  .instargram {
+    h2.title {
+      @include scale(0.8);
+    }
+  }
+  //FOOTER
+  footer {
+    .wrap {
+      .footer__left {
+        ul {
+          li {
+            @include font($size: $lt-size_footer_menu);
+
+            &.cotieshop {
+              @include font($size: $lt-size_footer_cotieshop);
+            }
+
+            address.address {
+              p {
+                @include font(0.8rem, $medium);
+              }
+            }
+          }
+        }
+        p.copyright {
+          font-size: 1.2rem;
+        }
+      }
+      .footer__right {
+        span {
+          @include font($lt-size_footer_sns);
+          @include scale(0.9);
+        }
+      }
+    }
+  }
 }
 @include tablet {
   //공통
@@ -137,6 +174,44 @@
       @include font($tb-size_visual-title);
     }
   }
+  // INSTARGRAM
+  .instargram {
+    h2.title {
+      @include scale;
+    }
+  }
+  //FOOTER
+  footer {
+    .wrap {
+      .footer__left {
+        ul {
+          li {
+            @include font($size: $tb-size_footer_menu);
+
+            &.cotieshop {
+              @include font($size: $tb-size_footer_cotieshop);
+            }
+
+            address.address {
+              p {
+                @include font(0.5rem, $medium);
+              }
+            }
+          }
+        }
+        p.copyright {
+          font-size: 1.1rem;
+        }
+      }
+      .footer__right {
+        gap: 0;
+        span {
+          @include font($tb-size_footer_sns);
+          @include scale(0.7);
+        }
+      }
+    }
+  }
 }
 @include mobile {
   //공통
@@ -168,12 +243,45 @@
 
   .instargram {
     .wrap {
+      h2.title {
+        @include font($mb-size_title/2);
+      }
       .instargram__list {
         flex-wrap: wrap;
         @include flex;
 
         li {
           width: calc(100% / 2 - 3%);
+        }
+      }
+    }
+  }
+  //FOOTER
+  footer {
+    .wrap {
+      .footer__left {
+        ul {
+          li {
+            @include font($size: $mb-size_footer_menu);
+
+            &.cotieshop {
+              @include font($size: $mb-size_footer_cotieshop);
+            }
+
+            address.address {
+              p {
+                @include font(0.3rem, $medium);
+              }
+            }
+          }
+        }
+        p.copyright {
+          font-size: 0.8rem;
+        }
+      }
+      .footer__right {
+        span {
+          @include font($mb-size_footer_sns);
         }
       }
     }
