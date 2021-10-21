@@ -164,4 +164,18 @@
       @include font($mb-size_visual-title);
     }
   }
+  // INSTARGRAM
+
+  .instargram {
+    .wrap {
+      .instargram__list {
+        flex-wrap: wrap;
+        @include flex;
+
+        li {
+          width: calc(100% / 2 - 3%);
+        }
+      }
+    }
+  }
 }
