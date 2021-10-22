@@ -18,6 +18,29 @@ gnb_menu.forEach((gnb_menus, index) => {
     })
   })
 })
+
+// 첫번째 세션 하단부분까지 스크롤 했을경우
+//top버튼이 나오게
+const top_el = document.querySelector(".top")
+const first_section = document.querySelector(".visual").offsetHeight
+window.addEventListener("scroll", () => {
+  if (window.scrollY > first_section) {
+    top_el.style.display = "block"
+  } else {
+    top_el.style.display = "none"
+  }
+})
+// top버튼 클릭시 상위로 올라가는 이벤트
+
+const top_btn = document.querySelector(".top--btn")
+const header = document.querySelector("header").offsetTop
+top_btn.addEventListener("click", () => {
+  window.scrollTo({
+    top: header,
+    behavior: "smooth",
+  })
+})
+
 // FOOTER
 
 // cotieshop 버튼 클릭시 주소보이는 이벤트
