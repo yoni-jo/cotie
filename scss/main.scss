@@ -12,7 +12,8 @@
     @include scale(0.8);
   }
 
-  .floating--img {
+  .floating--img,
+  .top--btn {
     @include scale;
   }
   // item
@@ -114,7 +115,8 @@
     @include scale(0.7);
   }
 
-  .floating--img {
+  .floating--img,
+  .top--btn {
     display: none;
   }
   // item

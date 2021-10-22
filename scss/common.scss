@@ -6,39 +6,9 @@ html {
   font-size: 16px;
 }
 
-// 햄버거버튼
-.ham {
-  display: none;
-  width: 20px;
-  height: 30px;
-  cursor: pointer;
-  right: 2rem;
-  position: absolute;
-
-  span {
-    display: block;
-
-    &::before {
-      top: 20px;
-    }
-
-    &::after {
-      bottom: 20px;
-    }
-
-    &::after,
-    &::before {
-      position: absolute;
-      content: "";
-      width: 40px;
-      height: 3px;
-      background-color: $color-black;
-    }
-  }
-}
-
 main {
   padding-top: 170px;
+  position: relative;
 }
 
 section {
@@ -119,6 +89,7 @@ div.item__video {
 }
 
 // BTN 공용
+// more버튼
 .btn--more {
   text-align: center;
   transition: 0.2s;
@@ -152,6 +123,56 @@ div.item__video {
 
   span {
     z-index: 5;
+  }
+}
+
+// 햄버거버튼
+.ham {
+  display: none;
+  width: 20px;
+  height: 30px;
+  cursor: pointer;
+  right: 2rem;
+  position: absolute;
+
+  span {
+    display: block;
+
+    &::before {
+      top: 20px;
+    }
+
+    &::after {
+      bottom: 20px;
+    }
+
+    &::after,
+    &::before {
+      position: absolute;
+      content: "";
+      width: 40px;
+      height: 3px;
+      background-color: $color-black;
+    }
+  }
+}
+
+// TOp 버튼
+div.top {
+  width: 100%;
+  position: sticky;
+  text-align: right;
+  padding-right: 3rem;
+  bottom: 3rem;
+  .top--btn {
+    position: relative;
+    @include font($size: 2rem);
+    span.fas {
+      position: absolute;
+      top: -3rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 }
 
