@@ -9,7 +9,7 @@ html {
 // 햄버거버튼
 .ham {
   display: none;
-  width: 40px;
+  width: 20px;
   height: 30px;
   cursor: pointer;
   right: 2rem;
@@ -58,7 +58,11 @@ section {
   position: relative;
   text-align: center;
 }
+// FLOTING IMG
 
+.floating--img {
+  position: absolute;
+}
 // video
 .item__video {
   width: 100%;
@@ -86,6 +90,7 @@ div.item__video {
 .item {
   margin-top: 10rem;
   width: 100%;
+  position: relative;
   @include flex(space-between);
 
   .item__img,

@@ -12,6 +12,9 @@
     @include scale(0.8);
   }
 
+  .floating--img {
+    @include scale;
+  }
   // item
   .item {
     .item__info {
@@ -44,10 +47,6 @@
   .visual {
     .wrap {
       text-align: center;
-
-      .floating--img {
-        @include scale;
-      }
 
       h2.visual__title {
         @include font($size: $lt-size_visual-title);
@@ -114,6 +113,10 @@
   .title {
     @include scale(0.7);
   }
+
+  .floating--img {
+    display: none;
+  }
   // item
   .item {
     .item__info {
@@ -153,10 +156,6 @@
   .visual {
     .wrap {
       text-align: center;
-
-      .floating--img {
-        display: none;
-      }
 
       h2.visual__title {
         @include font($size: $tb-size_visual-title);

@@ -4,13 +4,13 @@
 // HEADER
 
 header {
-  z-index: 10;
+  z-index: 4;
   position: fixed;
   background: $color-bg;
   width: 100%;
   @include flex(space-between);
   align-items: center;
-  padding: 3rem;
+  padding: 2rem;
   transition: 1s;
 
   .logo {
@@ -41,12 +41,12 @@ header {
       @include flex(space-between);
       margin-right: 2rem;
 
-      li {
+      li.list {
         position: relative;
         transition: 1s;
       }
 
-      li:hover {
+      li.list:hover {
         &::before {
           position: absolute;
           top: -1rem;
@@ -79,12 +79,45 @@ header {
   }
 }
 
+// LNB
+
+nav.lnb {
+  z-index: 5;
+  width: 100%;
+  position: fixed;
+  top: 6rem;
+  @include flex;
+  .lnb_box {
+    height: 100%;
+    visibility: hidden;
+    min-width: 130px;
+    padding: 1.5rem;
+    line-height: 2;
+    background-color: $color-black;
+    @include font($size: 1.2rem);
+    font-family: $font-ko;
+    &.on {
+      visibility: visible;
+    }
+    &:first-child {
+      margin-left: -3rem;
+    }
+    &:last-child {
+      margin-right: 0rem;
+    }
+    .lnb--list {
+      a {
+        color: $color-white;
+      }
+    }
+  }
+}
 // VISUAL
 
 .visual {
+  margin-top: 0;
   .wrap {
     .floating--img {
-      position: absolute;
       max-width: 170px;
       &.floating_1 {
         top: -3rem;
@@ -121,16 +154,27 @@ header {
 }
 
 // BRANDS
-.brands:nth-of-type(2) {
-  > .item {
-    flex-direction: row-reverse;
-    .item__img,
-    .item__info {
-      width: calc(100% / 2);
+.brands {
+  .wrap {
+    > img {
+      &.floating_1 {
+        right: 0;
+      }
+      &.floating_2 {
+        left: -20%;
+        top: 55%;
+      }
+    }
+
+    .item:nth-of-type(3) {
+      flex-direction: row-reverse;
+      .item__img,
+      .item__info {
+        width: calc(100% / 2);
+      }
     }
   }
 }
-
 //NEW
 .new {
   position: relative;
