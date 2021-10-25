@@ -80,7 +80,6 @@ header {
 }
 
 // LNB
-
 nav.lnb {
   z-index: 5;
   width: 100%;
@@ -112,6 +111,81 @@ nav.lnb {
     }
   }
 }
+
+// SEARCH AREA
+.search__area {
+  &.show {
+    top: 0px;
+  }
+  z-index: 10;
+  width: 100%;
+  height: 500px;
+  position: fixed;
+  top: -500px;
+  transition: 0.3s;
+  background-color: $color-bg;
+  .wrap {
+    padding: 3rem;
+    .search__top {
+      @include flex(space-between);
+      button.close--btn {
+        position: relative;
+        cursor: pointer;
+        width: 80px;
+        height: 80px;
+        span,
+        span::after {
+          position: absolute;
+          transform: translateY(-50%);
+          transform-origin: center;
+          top: 50%;
+          left: 0;
+          width: 100%;
+          height: 5px;
+          background-color: $color-black;
+        }
+        span {
+          transform: rotate(45deg);
+          &::after {
+            content: "";
+            transform: rotate(-90deg);
+          }
+        }
+      }
+    }
+    .search__bottom {
+      margin-top: 3rem;
+      .search__form {
+        position: relative;
+        &::after {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: 0;
+          content: "";
+          width: 85%;
+          height: 4px;
+          background-color: black;
+        }
+        margin: 0 auto;
+        padding: 1rem 0 1rem 0;
+        input,
+        button {
+          height: 50px;
+          display: inline-block;
+          @include font($size: $pc-size_menu);
+        }
+        input {
+          width: 80%;
+          font-family: $font-ko;
+
+          color: $color-black;
+        }
+      }
+    }
+  }
+}
+
 // VISUAL
 
 .visual {
@@ -143,12 +217,23 @@ nav.lnb {
     }
 
     .item__img {
+      transition: 0.2s;
+      animation: rotate 0.2s;
       display: block;
       width: 100%;
       max-width: 1000px;
       height: 100%;
       object-fit: contain;
       margin: 0 auto;
+
+      @keyframes rotate {
+        0% {
+          transform: rotate(-60deg);
+        }
+        100% {
+          transform: rotate(0deg);
+        }
+      }
     }
   }
 }

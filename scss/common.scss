@@ -5,7 +5,10 @@ html {
   background-color: $color-bg;
   font-size: 16px;
 }
-
+body {
+  position: relative;
+  cursor: url("../img/cursor/cursor-pointer.png"), auto;
+}
 main {
   padding-top: 170px;
   position: relative;
@@ -20,7 +23,9 @@ section {
   @include font($pc-size_title);
   text-align: center;
 }
-
+.search {
+  cursor: pointer;
+}
 .wrap {
   max-width: 1380px;
   margin: 0 auto;

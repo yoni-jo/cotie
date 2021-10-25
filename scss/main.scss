@@ -8,7 +8,8 @@
     @include font($size: $lt-size_intro);
   }
   .btn__more,
-  .title {
+  .title,
+  button.close--btn {
     @include scale(0.8);
   }
 
@@ -110,9 +111,11 @@
   p {
     @include font($size: $tb-size_intro);
   }
-  .btn__more,
-  .title {
-    @include scale(0.7);
+  .btn--more,
+  .title,
+  path,
+  button.close--btn {
+    @include scale(0.6);
   }
 
   .floating--img,
@@ -121,22 +124,17 @@
   }
   // item
   .item {
-    .item__info {
-      .item--title {
-        img {
-          @include scale(0.8);
-        }
+  }
+  .item__info {
+    .item--title {
+      img {
+        @include scale(0.8);
       }
     }
   }
+
   // header
   header {
-    .logo {
-      path {
-        transform: scale(0.6);
-      }
-    }
-
     nav.gnb {
       .gnb__left {
         display: none;
@@ -153,7 +151,13 @@
       display: block;
     }
   }
-
+  .search__area {
+    .wrap {
+      .search__form {
+        padding: 0;
+      }
+    }
+  }
   // VISUAL
   .visual {
     .wrap {
@@ -216,20 +220,39 @@
 }
 @include mobile {
   //공통
-  p.info,
-  h4 {
-    @include font($mb-size_intro, $regular);
-  }
-  .btn__more,
-  .title {
-    @include scale(0.6);
-  }
+
   // item
-  .item {
+  div.item {
+    flex-direction: column !important;
+    .item__img,
+    .item__info {
+      margin: 0 auto;
+      width: 80% !important;
+    }
     .item__info {
       .item--title {
         img {
           @include scale;
+        }
+      }
+    }
+  }
+
+  .search__area {
+    .wrap {
+      .search__top {
+        justify-content: flex-end;
+        div.logo {
+          display: none;
+        }
+      }
+      .search__bottom {
+        .search__form {
+          padding: 0;
+          input,
+          button {
+            @include font($size: $mb-size_menu);
+          }
         }
       }
     }

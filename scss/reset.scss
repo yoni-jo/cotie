@@ -18,9 +18,11 @@ a {
   text-decoration: none;
   color: #000;
 }
-button {
+button,
+input {
   background: none;
-  border: none;
+  border: 0px;
+  outline: none;
 }
 img {
   display: block;
