@@ -268,7 +268,7 @@
   .instargram {
     .wrap {
       h2.title {
-        @include font($mb-size_title/2);
+        @include font($mb-size_menu);
       }
       .instargram__list {
         flex-wrap: wrap;
